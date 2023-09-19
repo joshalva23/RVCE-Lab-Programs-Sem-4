@@ -1,0 +1,3 @@
+Make sure package name is at the top of java file
+javac -d cur_directory_path filename.java
+java package_name.class_name
