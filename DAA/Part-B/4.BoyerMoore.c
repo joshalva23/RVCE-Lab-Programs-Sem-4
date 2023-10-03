@@ -21,16 +21,17 @@ void search(char *txt, char *pat)
     int badchar[NO_OF_CHARS];
     badCharHeuristic(pat,m,badchar);
     int s = 0;
+    int j;
     int count = 0;
     while( s < (n-m))
     {
-        int j = m-1;
+        j = m-1;
         while(j >= 0 && pat[j] == txt[s+j])
             j--;
         if(j < 0)
         {
             printf("\nPattern occurs at shift= %d",s);
-            s += ((s+ m) < n)? (m-badchar [txt[s+m]]): 1;
+            s += ((s+m) < n) ? (m-badchar [txt[s+m]]): 1;
             count++;
         } else
             s += max(1, j-badchar[txt[s+j]]);

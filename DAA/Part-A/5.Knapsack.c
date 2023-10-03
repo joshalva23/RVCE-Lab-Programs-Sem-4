@@ -68,3 +68,21 @@ int main()
     Knapsack(n, m, w, v, p);
     ItemsOfOptimal(n, m, w, v);
 }
+
+/*
+-------------------------------
+0/1 KnapSack Problem
+    Iterative Approach
+    INPUTS:
+        n -> number of objects
+        w -> array of weights
+        m -> capacity
+        p -> profit on each item
+    
+    Time and Space Complexity
+        O(2^N) , O(N) -> brute force algorithm
+        O(N*M) , O(N*M) -> iterative approach
+        O(N*M) , O(N*W) + O(N) -> DP approach / Memoization
+        
+-------------------------------
+*/

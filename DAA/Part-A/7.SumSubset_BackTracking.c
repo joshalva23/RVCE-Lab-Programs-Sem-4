@@ -46,3 +46,16 @@ int main()
     // 0-s 1-k sum-r
     return (0);
 }
+/*
+-----------------------------
+Sum of Subset 
+Using Memoization 
+    Time Complexity O(sum*n)
+    Space Complexity O(sum*n+n)
+
+Using Backtracking and Recursion
+    Time Complexity O(2^n)
+    Space Complexity O(n)
+    NP Complete problem
+-----------------------------
+*/

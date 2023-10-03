@@ -135,4 +135,22 @@ Vertex          Distance from Source
 7                  8
 8                  14
 */
+/*
+----------------------------------
+Djikstra's Algorithm
+    Greedy Approach
+    
+    INPUTS:
+        ADJ_MATRIX[NxN]
+        V -> vertices = N
+        E -> edges
+
+    Time Complexity 
+        O(V^2) -> matrix
+        O(E*logV) -> list and heap
+        
+    Auxiliary Space O(V)
+
+----------------------------------
+*/
 

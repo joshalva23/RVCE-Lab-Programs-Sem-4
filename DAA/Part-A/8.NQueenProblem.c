@@ -60,3 +60,12 @@ int main()
         NQueen(1, n);
     return (0);
 }
+
+/*
+-------------------------
+N Queen's Problem
+    Time Complexity O(N!)
+    Space Complexity O(N^2)
+
+-------------------------
+*/

@@ -9,7 +9,6 @@ void heapify(int n, int h[]){
         while(!heap && 2*k<=n){
             j = 2*k;
             if(j<n){
-                //then two children
                 if(h[j] < h[j+1])
                     j = j+1;
             }

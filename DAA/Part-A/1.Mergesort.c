@@ -3,12 +3,14 @@
 #define SIZE 1000
 int count;
 
+//This function sorts and merges the two sub arrays
 void merge(int A[SIZE], int l, int m, int r)
 {
 	int i, j, k, B[SIZE];
 	i = l;
 	j = m+1;
 	k = l;
+	//Merge array till either one exhausts
 	while(i <= m && j <= r)
 	{
 		if(A[i] < A[j])
@@ -22,10 +24,12 @@ void merge(int A[SIZE], int l, int m, int r)
 			count++;
 		}
 	}
+	//Merge remaining
 	while( i <= m)
 		B[k++] = A[i++];
 	while(j <= r)
 		B[k++] = A[j++];
+	//Merge into main array from the duplicate
 	for(i = l; i < k; i++)
 		A[i] = B[i];
 }
@@ -44,16 +48,22 @@ int main()
 {
 	int A[SIZE], X[SIZE], Y[SIZE], Z[SIZE];
 	int n, i, j, c1, c2, c3;
+
 	printf("Enter the size of the array:");
 	scanf("%d",&n);
+
 	printf("Read elements \n");
 	for( i = 0; i < n; i++)
 		scanf("%d",&A[i]);
+
 	mergesort(A,0,n-1);
+
 	printf("The sorted elements are\n");
 	for(i = 0; i < n; i++)
 		printf("%d\t", A[i]);
 	printf("\nThe basic operation executes %d times\n",count);
+	
+	//Testing code to check for the time complexity for asc, desc, and random orders of arrays
 	printf("\nSIZE\tASC\tDESC\tRANDOM\n");
 	for(i = 16; i < SIZE; i = i*2)
 	{
@@ -76,3 +86,19 @@ int main()
 	}
 	return 0;
 }
+/*
+-----------------
+MergeSort
+	Input: Array
+	Output: Sorted Array
+	Divide N Conquer
+	Stable
+	Not InPlace
+	Recurrence Relation 
+		T(n) = 2T(n/2) + ʘ(n)
+	Time Complexity O(nlogn)
+	Space Complexity O(n)
+
+	Optimal for large datasets
+-------------------
+*/

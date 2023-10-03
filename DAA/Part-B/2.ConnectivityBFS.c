@@ -35,20 +35,12 @@ int dequeue(queue *q)
     return q->data[q->front];
 }
 
-int not_queued(bool *a, int n)
-{
-    for (int i = 0; i < n; i++)
-        if (!a[i])
-            return i;
-    return -1;
-}
-
 void bfs(int current, int n, bool graph[][n], bool *queued, queue *Q) //, stack* s)
 {
     printf("%d\t", current + 1);
     for (int i = 0; i < n; i++)
     {
-        if (graph[current][i] && !queued[i])
+        if (graph[current][i] == 1 && !queued[i])
         {
             enqueue(Q, i);
             queued[i] = true;
@@ -67,12 +59,12 @@ void traverse(int n, bool graph[][n], bool *queued, queue *Q)
     printf("Dequeue order:\n");
     while (1)
     {
-        current = not_queued(queued, n);
-        if (current == -1)
-            break;
-        queued[current] = true;
-        bfs(current, n, graph, queued, Q);
-        count++;
+        for (int i = 0; i < n; i++)
+            if (!queued[i]){
+                queued[i] = true;
+                bfs(i, n, graph, queued, Q);
+                count++;
+            }
     }
     printf("\n\nNumber of graphs is %d\n\n", count);
     return;

@@ -4,6 +4,8 @@ int stack[10];
 int output[10];
 int top = -1;
 int wow = 0;
+
+//Performs the dfs operations using visited array
 void dfs(int a[10][10], int n, int visited[10], int current)
 {
     int j, m;
@@ -20,7 +22,8 @@ void dfs(int a[10][10], int n, int visited[10], int current)
     printf("%d ", m);
     output[wow++] = current;
 }
-int DFS(int a[10][10], int n)
+// Gets the starting nodes for graph operations and prints the number of graphs
+int DFS(int a[10][10], int n)  
 {
     int visited[10], comp = 0, i;
     for (i = 0; i < n; i++)
@@ -68,3 +71,19 @@ int main()
     printf("\n");
     return 0;
 }
+
+/*
+-----------------
+Topological Sorting
+    Input: Directed Acyclic Graph using Adjacency Matrix
+    Uses Stack
+    Inverse Pop order gives result
+    Time Complexity O(N**2)
+    Space Complexity O(N**2 + N)
+
+    Used in scheduling jobs based on dependencies
+            data serialisation
+            logic synthesis
+
+-----------------
+*/
