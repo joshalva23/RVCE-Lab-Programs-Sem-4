@@ -1,0 +1,13 @@
+; 3X + 4Y + 9Z, X= 2, Y=3, Z=4
+
+	AREA RESET, CODE
+	ENTRY
+	MOV R0, #3
+	MOV R1, #4
+	MOV R2, #9
+	MUL R1, R0, R1
+	ADD R0, R1, R0, LSL #1
+	ADD R0, R0, R2, LSL #2
+	
+STOP B STOP
+	END
