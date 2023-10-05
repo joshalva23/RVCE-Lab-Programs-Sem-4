@@ -1,8 +1,5 @@
-// Alpha-numeric LCD Interface (4Lines,20characters)
-// Connected in 4bit nibble mode
-// LCD handshaking:RS->P0.20,EN->P0.25 ,R/W -Gnd
-// LCD data:D4,D5,D6,D7 -> P0.16,P0.17,P0.18,P0.19
-
+// Analog Wave Generation using Sampling
+// Generates Sine Wave, Full Rectified Sine Wave, Triangular Wave and Saw Tooth Wave
 #include <lpc214x.h>
 #include<math.h>
 #include <stdio.h>
