@@ -5,7 +5,7 @@
 	LDR R0, =INPUTS 
 	LDR R1, =OUTPUTS 
 CONT 
-	LDR R2, [R0] 
+	LDR R2, [R0]
 	ADD R4, R4, R2 
 	ADD R0, R0, #4 
 	ADD R3, R3, #1 

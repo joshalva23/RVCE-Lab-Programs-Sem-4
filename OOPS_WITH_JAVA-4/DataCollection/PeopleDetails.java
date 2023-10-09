@@ -77,8 +77,8 @@ public class PeopleDetails {
             id = in.nextLine();
             System.out.println("Enter the address of " + name);
             System.out.println("1. Street Number\n2. City\n3. State\n4. Country");
-            addr[i] = new Address(Integer.parseInt(in.nextLine()), in.nextLine(), in.nextLine(), in.nextLine());
-            empl[i] = new Employee(id, name, addr[i]);
+            addr[i + num] = new Address(Integer.parseInt(in.nextLine()), in.nextLine(), in.nextLine(), in.nextLine());
+            empl[i] = new Employee(id, name, addr[i + num]);
         }
 
 
@@ -88,8 +88,8 @@ public class PeopleDetails {
             name = in.nextLine();
             System.out.println("Enter the address of " + name);
             System.out.println("1. Street Number\n2. City\n3. State\n4. Country");
-            addr[i] = new Address(Integer.parseInt(in.nextLine()), in.nextLine(), in.nextLine(), in.nextLine());
-            col[i] = new College(name, addr[i]);
+            addr[i + 2*num] = new Address(Integer.parseInt(in.nextLine()), in.nextLine(), in.nextLine(), in.nextLine());
+            col[i] = new College(name, addr[i + 2*num]);
         }
         
         in.close();
